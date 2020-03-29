@@ -1,0 +1,97 @@
+
+@font-face {
+    font-family: 'rene_mederosregular';
+    src: url('renemederos-webfont.woff2') format('woff2'),
+         url('renemederos-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-animation: background 20s linear infinite;
+  animation: background 20s linear infinite;  
+}
+
+* {
+  font-family: 'rene_mederosregular', sans-serif;
+}
+
+div.wrapper {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+input.typewriter {
+  font-size: 35vh;
+  border: none;
+  background-color: transparent;
+  padding: .1em .5em;
+  outline: none;
+  position: relative;
+  /*border-right: 5px solid;
+  border-right-color: black;
+  animation: cursor .5s infinite;
+  animation-fill-mode: both;*/
+  -webkit-animation: textcolor 20s linear infinite;
+  animation: textcolor 20s linear infinite;  
+}
+
+/*@keyframes cursor {
+  100% { border-right-color: transparent; }
+}*/
+
+@-webkit-keyframes background {
+  0% { background-color: #E53027; }
+  33% { background-color: #F7CA13; }  
+  67% { background-color: #2E3192; }
+  100% { background-color: #E53027; }
+}
+
+@keyframes textcolor {
+  0% { background-color: #E53027; }
+  33% { background-color: #F7CA13; }  
+  67% { background-color: #2E3192; }
+  100% { background-color: #E53027; }
+}
+
+@-webkit-keyframes textcolor {
+  0% { color: #F7CA13; }
+  33% { color: #2E3192; }  
+  67% { color: #E53027; }
+  100% { color: #F7CA13; }
+}
+
+@keyframes textcolor {
+  0% { color: #F7CA13; }
+  33% { color: #2E3192; }  
+  67% { color: #E53027; }
+  100% { color: #F7CA13; }
+}
+
+@media print {
+
+@page { size: auto;  margin: 0mm; }
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+input.typewriter {
+  font-size: 8rem;
+  margin: 0;
+  width: 100%;
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+}
+
+}
